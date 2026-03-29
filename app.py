@@ -167,3 +167,7 @@ def logout():
 
 if __name__ == "__main__":
     app.run()
+    app = Flask(__name__) # تأكد إن اسم المتغير app
+
+# في آخر الملف خالص:
+app = app
