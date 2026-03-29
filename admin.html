@@ -1,0 +1,27 @@
+<h1>Dashboard</h1>
+
+<a href="/logout">Logout</a>
+
+<h3>Stats</h3>
+<p>Messages: {{ total_messages }}</p>
+<p>Orders: {{ total_orders }}</p>
+<p>Projects: {{ total_projects }}</p>
+
+<h3>Add Project</h3>
+<form method="POST" action="/add_project" enctype="multipart/form-data">
+    <input name="title">
+    <input type="file" name="image">
+    <button>Upload</button>
+</form>
+
+<h3>Messages</h3>
+{% for msg in messages %}
+<p>{{ msg.name }} - {{ msg.message }}</p>
+<a href="/delete/msg/{{ msg.id }}">Delete</a>
+{% endfor %}
+
+<h3>Orders</h3>
+{% for order in orders %}
+<p>{{ order.name }} - {{ order.service }}</p>
+<a href="/delete/order/{{ order.id }}">Delete</a>
+{% endfor %}

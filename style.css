@@ -1,0 +1,19 @@
+body {
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.card {
+    background: #222;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+input, textarea, select {
+    width: 80%;
+    margin: 5px;
+    padding: 10px;
+}
